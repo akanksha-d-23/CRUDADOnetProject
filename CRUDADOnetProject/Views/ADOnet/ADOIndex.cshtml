@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "ADOIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ADOIndex</h2>
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Pages/ADO.js"></script>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+<script>
+    var js = jQuery.noConflict(true);
+    js(document).ready(function () {
+        js('#ADOnet').DataTable({
+            "searching": true,
+            "scrollY": 355,
+            "paging": true,
+            "ordering": true,
+            "info": true,
+            "responsive": true
+        });
+
+    });
+
+
+</script>
+
+
+<div class="col-lg-6">
+    <center>
+        <div class="table table-striped" style="background: linear-gradient( #fff, #ccc );">
+
+            <input type="hidden" id="hdnEmpId" />
+            <label>Name</label>
+            <input type="text" id="txtName" class="form-control" />
+            <br />
+            <label>Email</label>
+            <input type="text" id="txtEmail" class="form-control" />
+            <br />
+            <label>Address</label>
+            <input type="text" id="txtAddress" class="form-control" />
+            <br />
+            <label>Mobile No</label>
+            <input type="text" id="txtMobile" class="form-control" />
+            <br />
+            <label>State</label><br />
+            <select id="ddlState" class="form-control"></select>
+            <br />
+
+            <label>City</label><br />
+            <select id="ddlCity" class="form-control"></select><br />
+
+            <br />
+            <input type="submit" value="Submit" onclick="SaveEmployee()" class="form-control" />
+            <br />
+            <br />
+
+        </div>
+    </center>
+</div>
