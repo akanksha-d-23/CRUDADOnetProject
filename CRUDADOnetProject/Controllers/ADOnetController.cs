@@ -14,7 +14,7 @@ namespace CRUDADOnetProject.Controllers
         {
             return View();
         }
-        public ActionResult SaveEmployee(ADOModel model)
+        public ActionResult SaveEmp(ADOModel model)
         {
             try
             {
