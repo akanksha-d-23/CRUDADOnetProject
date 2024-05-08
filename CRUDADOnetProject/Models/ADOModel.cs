@@ -14,8 +14,8 @@ namespace CRUDADOnetProject.Models
         public int EmpId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public string Passward { get; set; }
         public string Address { get; set; }
-
         public string Mobile { get; set; }
         public string State { get; set; }
         public string City { get; set; }
@@ -30,6 +30,7 @@ namespace CRUDADOnetProject.Models
             cmd.Parameters.AddWithValue("@EmpId", model.EmpId);
             cmd.Parameters.AddWithValue("Name", model.Name);
             cmd.Parameters.AddWithValue("Email", model.Email);
+            cmd.Parameters.AddWithValue("Passward", model.Passward);
             cmd.Parameters.AddWithValue("Address", model.Address);
             cmd.Parameters.AddWithValue("State", model.State);
             cmd.Parameters.AddWithValue("City", model.City);
