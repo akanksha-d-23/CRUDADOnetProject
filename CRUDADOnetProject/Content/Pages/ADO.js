@@ -1,5 +1,5 @@
 ﻿var SaveEmployee = function () {
-    var EmpId = $("#SaveEmployee").val();
+    var EmpId = $("#hdnid").val();
     var Name = $("#txtName").val();
     var Email = $("#txtEmail").val();
     var Passward = $("#passward").val();
